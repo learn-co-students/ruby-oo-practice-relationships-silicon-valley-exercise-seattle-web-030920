@@ -1,3 +1,5 @@
+#paried with Charlie 
+
 require_relative '../config/environment.rb'
 
 def reload
