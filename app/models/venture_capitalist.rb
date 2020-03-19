@@ -32,24 +32,11 @@ class VentureCapitalist
     end
   
     def biggest_investment 
-        big = 0
-        big_round = ""
-        i = 0 
-        rounds = self.funding_rounds
-        while i < rounds.count
-            if rounds[i].investment > big
-                big = rounds[i].investment
-                big_round = rounds[i]
-            end
-            i += 1
-        end
-        big_round
-
+        funding_rounds.max_by {|biggest_investment|biggest_investment.investment}
     end
 
     def invested(domain)
-        domain_investments = self.funding_rounds.select { |round| round.startup.domain == domain}
-        domain_investments.map { |round| round.investment}.sum
+        funding_rounds.select { |round| round.startup.domain == domain}.map { |round| round.investment}.sum
     end
 end
 

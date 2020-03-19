@@ -9,17 +9,20 @@ def reload
 end
 
 
-startup1 = Startup.new("SuperGoods", "Joe Schmoe", "Super Domain")
-startup2 = Startup.new("Store", "Me", "My Domain")
+startup1 = Startup.new("SuperGoods", "Joe Schmoe", "Another Domain")
+startup2 = Startup.new("Store", "Me", "Another Domain")
 startup3 = Startup.new("Next Big Thing", "Joe Schmoe", "Another Domain")
+startup4 = Startup.new("Another Thing", "Joe Schmoe", "Another Domain")
+
 
 vc1 = VentureCapitalist.new("Bill Gates", 1000000000)
 vc2 = VentureCapitalist.new("Christine", 100)
 vc3 = VentureCapitalist.new("John Jacob", 500000)
 
-funding_round1 = FundingRound.new(startup1, vc1, "Angel", 500000)
-funding_round2 = FundingRound.new(startup1, vc2, "Series C", 15)
-funding_round3 = FundingRound.new(startup1, vc2, "Seed", 25000)
+funding_round1 = FundingRound.new(startup1, vc2, "Angel", 500000)
+funding_round2 = FundingRound.new(startup3, vc2, "Series C", 15)
+funding_round3 = FundingRound.new(startup3, vc2, "Seed", 25000)
+funding_round3 = FundingRound.new(startup4, vc2, "Seed", 25000)
 
 # types of funding rounds: Angel, Pre-Seed, Seed, Series A, Series B, Series C
 
